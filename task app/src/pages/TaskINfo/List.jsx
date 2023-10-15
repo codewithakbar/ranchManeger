@@ -25,7 +25,7 @@ export default function List({ taskItem, closeRef, setEditingTaskName, editingTa
     const postCard = async (listId, cardValue) => {
         try {
             await axios.post(
-                `http://manager.zafarr.uz/routers/card/`,
+                `https://manager.zafarr.uz/routers/card/`,
                 {
                     title: cardValue,
                     list: listId,
@@ -47,7 +47,7 @@ export default function List({ taskItem, closeRef, setEditingTaskName, editingTa
     const deleteList = async () => {
         try {
             const response = await axios.delete(
-                `http://manager.zafarr.uz/routers/list/${taskItem.id}`,
+                `https://manager.zafarr.uz/routers/list/${taskItem.id}`,
                 {
                     headers: {
                         'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ export default function List({ taskItem, closeRef, setEditingTaskName, editingTa
         console.log(taskItem);
         try {
             const response = await axios.put(
-                `http://manager.zafarr.uz/routers/list/${taskItem}/`,
+                `https://manager.zafarr.uz/routers/list/${taskItem}/`,
                 {
                     title: inputValue ,
                     board: id

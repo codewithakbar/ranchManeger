@@ -46,7 +46,7 @@ export default function MainNav({ setTaskData, taskData }) {
     const AddBoard = async () => {
         try {
             const response = await axios.post(
-                "http://manager.zafarr.uz/routers/boards/",
+                "https://manager.zafarr.uz/routers/boards/",
                 {
                     title: inputRef.current.value ,
                     user: [userID]

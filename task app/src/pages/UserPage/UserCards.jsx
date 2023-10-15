@@ -13,7 +13,7 @@ export default function UserCards({ item }) {
     const token = localStorage.getItem('accessToken')
 
     const deleteBoard = async () => {
-        const response = await axios.delete(`http://manager.zafarr.uz/routers/boards/${item.id}`,
+        const response = await axios.delete(`https://manager.zafarr.uz/routers/boards/${item.id}`,
             {
                 headers: {
                     'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ export default function UserCards({ item }) {
 
 
     const renameBoard = async (Id, Title) => {
-        const response = await axios.put(`http://manager.zafarr.uz/routers/boards/${item.id}/`,
+        const response = await axios.put(`https://manager.zafarr.uz/routers/boards/${item.id}/`,
             {
                 title: Title,
             },

@@ -10,7 +10,7 @@ export default function Card({ids , closeRef}) {
     // get card 
     const [cards, setCards] = useState([])
     const getCard = async () => {
-        const response = await axios.get(`http://manager.zafarr.uz/routers/cards/${ids}`)
+        const response = await axios.get(`https://manager.zafarr.uz/routers/cards/${ids}`)
         setCards(response.data)
     }
 

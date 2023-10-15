@@ -48,7 +48,7 @@ function Chat({ card }) {
   const tokenw = localStorage.getItem('accessToken');
   const userID = localStorage.getItem('userID')
   const getCommet = async () => {
-    const response = await axios.get(`http://manager.zafarr.uz/routers/comments/card/${card.id}/`,
+    const response = await axios.get(`https://manager.zafarr.uz/routers/comments/card/${card.id}/`,
       {
         headers: {
           'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ function Chat({ card }) {
       }
     
       await axios.post(
-        `http://manager.zafarr.uz/routers/comments/card/post/${card.id}/`,
+        `https://manager.zafarr.uz/routers/comments/card/post/${card.id}/`,
         formData,
         {
           headers: {
@@ -102,7 +102,7 @@ function Chat({ card }) {
     // getUsername 
     const [userInfos , setUserInfos] = useState([])
     const getUserInfo = async () => {
-        const response = await axios.get(`http://manager.zafarr.uz/routers/userprofile/${userID}/`)
+        const response = await axios.get(`https://manager.zafarr.uz/routers/userprofile/${userID}/`)
         setUserInfos(response.data)
     }
 

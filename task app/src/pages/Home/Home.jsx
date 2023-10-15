@@ -14,7 +14,7 @@ export default function Home() {
 
     const getUser = async () => {
         try {
-            const response = await axios.get(`http://manager.zafarr.uz/users/`, {
+            const response = await axios.get(`https://manager.zafarr.uz/users/`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Token ${token}`,
@@ -39,7 +39,7 @@ export default function Home() {
 
     const getBoard = async () => {
         try {
-            const response = await axios.get(`http://manager.zafarr.uz/routers/boards/`, {
+            const response = await axios.get(`https://manager.zafarr.uz/routers/boards/`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Token ${token}`,

@@ -35,7 +35,7 @@ export default function ProfelInfo() {
     const userID = localStorage.getItem('userID')
     const [userInfos, setUserInfos] = useState([])
     const getUserInfo = async () => {
-        const response = await axios.get(`http://manager.zafarr.uz/routers/userprofile/${userID}/`)
+        const response = await axios.get(`https://manager.zafarr.uz/routers/userprofile/${userID}/`)
         setUserInfos(response.data)
     }
     useEffect(() => {
@@ -55,7 +55,7 @@ export default function ProfelInfo() {
             const tokenw = localStorage.getItem('accessToken');
     
             const response = await axios.put(
-                `http://manager.zafarr.uz/userprofiles/${userID}/`,
+                `https://manager.zafarr.uz/userprofiles/${userID}/`,
                 formData,
                 {
                     headers: {

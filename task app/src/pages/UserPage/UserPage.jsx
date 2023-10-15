@@ -14,7 +14,7 @@ import UserCards from "./UserCards";
 export default function Home() {
 
     const getUser = async () => {
-        const response = await axios.get("http://manager.zafarr.uz/users/")
+        const response = await axios.get("https://manager.zafarr.uz/users/")
         setUserData(response.data)
     }
 
@@ -31,7 +31,7 @@ export default function Home() {
 
     const getBoard = async () => {
         try {
-            const response = await axios.get(`http://manager.zafarr.uz/routers/user/boards/${userID}/`, {
+            const response = await axios.get(`https://manager.zafarr.uz/routers/user/boards/${userID}/`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Token ${token}`,

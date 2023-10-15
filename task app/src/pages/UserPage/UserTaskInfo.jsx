@@ -28,7 +28,7 @@ export default function UserTaskInfo() {
     const [tasksChil, setTasksChil] = useState([])
 
     const getTask = async () => {
-        const response = await axios.get(`http://manager.zafarr.uz/routers/lists/${id}`)
+        const response = await axios.get(`https://manager.zafarr.uz/routers/lists/${id}`)
         setTasksChil(response.data)
     }
 
@@ -73,7 +73,7 @@ export default function UserTaskInfo() {
     const addList = async () => {
         try {
             const response = await axios.post(
-                `http://manager.zafarr.uz/routers/list/`,
+                `https://manager.zafarr.uz/routers/list/`,
                 {
                     title: taskNameRef.current.value,
                     board: id
@@ -96,7 +96,7 @@ export default function UserTaskInfo() {
     const [boadUsers, setBoardUsers] = useState([])
     const BoardUsers = async () => {
         try {
-            const response = await axios.get(`http://manager.zafarr.uz/routers/boards/${id}`,
+            const response = await axios.get(`https://manager.zafarr.uz/routers/boards/${id}`,
                 {
                     headers: {
                         'Content-Type': 'application/json',

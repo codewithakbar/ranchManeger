@@ -29,7 +29,7 @@ export default function TaskInfo() {
     const [tasksChil, setTasksChil] = useState([])
 
     const getTask = async () => {
-        const response = await axios.get(`http://manager.zafarr.uz/routers/lists/${id}`)
+        const response = await axios.get(`https://manager.zafarr.uz/routers/lists/${id}`)
         setTasksChil(response.data)
     }
 
@@ -38,7 +38,7 @@ export default function TaskInfo() {
     }, [])
 
     const getUser = async () => {
-        const response = await axios.get("http://manager.zafarr.uz/users/",
+        const response = await axios.get("https://manager.zafarr.uz/users/",
             {
                 headers: {
                     'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ export default function TaskInfo() {
     const addList = async () => {
         try {
             const response = await axios.post(
-                `http://manager.zafarr.uz/routers/list/`,
+                `https://manager.zafarr.uz/routers/list/`,
                 {
                     title: taskNameRef.current.value,
                     board: id
@@ -117,7 +117,7 @@ export default function TaskInfo() {
     const addUserBoard = async (itemID) => {
         try {
             const response = await axios.post(
-                `http://manager.zafarr.uz/invite_user/${id}/boards/`,
+                `https://manager.zafarr.uz/invite_user/${id}/boards/`,
                 {
                     user_id: itemID
                 },
@@ -139,7 +139,7 @@ export default function TaskInfo() {
     const [boadUsers , setBoardUsers] = useState([])
     const BoardUsers = async () => {
         try {
-            const response = await axios.get(`http://manager.zafarr.uz/routers/boards/${id}` ,
+            const response = await axios.get(`https://manager.zafarr.uz/routers/boards/${id}` ,
                 {
                     headers: {
                         'Content-Type': 'application/json',

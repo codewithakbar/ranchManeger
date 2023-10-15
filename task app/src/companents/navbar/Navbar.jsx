@@ -12,7 +12,7 @@ export default function Navbar() {
     const userID = localStorage.getItem('userID')
     const [userInfos, setUserInfos] = useState([])
     const getUserInfo = async () => {
-        const response = await axios.get(`http://manager.zafarr.uz/routers/userprofile/${userID}/`)
+        const response = await axios.get(`https://manager.zafarr.uz/routers/userprofile/${userID}/`)
         setUserInfos(response.data)
     }
 
